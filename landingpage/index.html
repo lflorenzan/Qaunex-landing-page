@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Qaunex Optimizer – Never Overpay Solana Fees</title>
+
+<style>
+/* Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: #0B1C2C;
+    color: #ffffff;
+    font-family: 'Inter', system-ui, -apple-system, sans-serif;
+    line-height: 1.5;
+}
+
+/* ===== LOGO ===== */
+.logo {
+    display: flex;
+    justify-content: center;
+    margin: 2rem 0 1rem;
+}
+
+.logo svg {
+    width: 110px;
+    height: 110px;
+    transition: transform 0.25s ease;
+}
+
+.logo svg:hover {
+    transform: scale(1.08);
+}
+
+/* HEXAGON */
+.hex {
+    fill: none;
+    stroke: url(#grad);
+    stroke-width: 6;
+    stroke-linejoin: round;
+    opacity: 0.9;
+}
+
+/* MAIN X */
+.x-shape path {
+    stroke: url(#grad);
+    stroke-width: 7;
+    stroke-linecap: round;
+    fill: none;
+}
+
+/* GLOW LAYER */
+.glow path {
+    stroke: #00bfff;
+    stroke-width: 10;
+    opacity: 0.25;
+    filter: blur(6px);
+    fill: none;
+}
+
+/* ===== SECTIONS ===== */
+section {
+    padding: 4rem 2rem;
+    text-align: center;
+}
+
+h1 {
+    font-size: 3rem;
+    background: linear-gradient(135deg, #00bfff, #ffffff);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    margin-bottom: 1rem;
+}
+
+h2 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+}
+
+p, li {
+    color: #aaa;
+    font-size: 1.1rem;
+}
+
+.highlight {
+    color: #00bfff;
+    font-weight: bold;
+}
+
+ul {
+    list-style: none;
+    max-width: 600px;
+    margin: 1rem auto;
+}
+
+li {
+    margin: 0.5rem 0;
+}
+
+/* Comparison */
+.comparison {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    margin: 1rem 0;
+}
+
+.default, .optimized {
+    background: rgba(255,255,255,0.1);
+    padding: 0.5rem 1rem;
+    border-radius: 8px;
+}
+
+.optimized {
+    border: 1px solid #00bfff;
+    color: #00bfff;
+}
+
+/* CTA */
+.cta {
+    background: #00bfff;
+    border: none;
+    color: #0B1C2C;
+    font-weight: bold;
+    padding: 0.8rem 2rem;
+    border-radius: 40px;
+    font-size: 1.1rem;
+    cursor: pointer;
+    transition: 0.2s;
+    margin-top: 1rem;
+}
+
+.cta:hover {
+    background: #0099cc;
+    transform: scale(1.03);
+}
+
+/* MailerLite styling */
+#mlb2-40186443 .ml-form-embedWrapper {
+    background: #0a1a28 !important;
+    border: 1px solid #00bfff !important;
+    border-radius: 16px !important;
+}
+
+#mlb2-40186443 input {
+    background: rgba(255,255,255,0.1) !important;
+    border: 1px solid #00bfff !important;
+    color: white !important;
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    padding: 2rem;
+    color: #666;
+    font-size: 0.8rem;
+    border-top: 1px solid rgba(255,255,255,0.1);
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+    h1 { font-size: 2rem; }
+    h2 { font-size: 1.5rem; }
+    section { padding: 2rem 1rem; }
+}
+</style>
+</head>
+
+<body>
+
+<!-- ===== SVG LOGO ===== -->
+<div class="logo">
+  <svg viewBox="0 0 120 120" xmlns="http://www.w3.org/2000/svg">
+
+    <!-- HEXAGON -->
+    <path class="hex"
+      d="M60 8 L100 32 L100 88 L60 112 L20 88 L20 32 Z"/>
+
+    <!-- X SHAPE -->
+    <g class="x-shape">
+      <path d="M38 42 L72 66"/>
+      <path d="M72 42 L38 66"/>
+      <!-- extended leg -->
+      <path d="M62 62 L100 100"/>
+    </g>
+
+    <!-- Glow duplicate (for neon effect) -->
+    <g class="glow">
+      <path d="M38 42 L72 66"/>
+      <path d="M72 42 L38 66"/>
+      <path d="M62 62 L100 100"/>
+    </g>
+
+    <!-- Gradient -->
+    <defs>
+      <linearGradient id="grad" x1="0%" y1="0%" x2="100%" y2="100%">
+        <stop offset="0%" stop-color="#00d4ff"/>
+        <stop offset="100%" stop-color="#1e90ff"/>
+      </linearGradient>
+    </defs>
+
+  </svg>
+</div>
+
+<!-- HERO -->
+<section class="hero">
+    <h1>Stop Overpaying Solana Fees</h1>
+    <p>Optimize every transaction in real time and always pay the lowest possible fee — even during congestion.</p>
+    <button class="cta" onclick="document.getElementById('signup-form').scrollIntoView({behavior: 'smooth'});">
+        Join Early Access
+    </button>
+</section>
+
+<!-- PROBLEM -->
+<section>
+    <h2>Solana fees are cheap — until they spike.</h2>
+    <p>During high demand: users unknowingly overpay, fees become unpredictable, there’s no simple way to optimize.</p>
+    <p class="highlight">👉 Same transaction, different users → different costs</p>
+</section>
+
+<!-- SOLUTION -->
+<section>
+    <h2>We optimize your transaction before it’s sent.</h2>
+    <ul>
+        <li>Analyze real-time network conditions</li>
+        <li>Recommend the optimal fee</li>
+        <li>Reduce unnecessary overpayment</li>
+    </ul>
+</section>
+
+<!-- REWARDS -->
+<section>
+    <h2>Optimize smarter — and get rewarded.</h2>
+    <ul>
+        <li>Earn credits every time you optimize a transaction</li>
+        <li>Use credits to reduce future transaction costs</li>
+        <li>The more you optimize, the more you save</li>
+    </ul>
+    <p class="highlight">👉 Smarter transactions pay you back</p>
+</section>
+
+<!-- PROOF -->
+<section>
+    <h2>Example during congestion:</h2>
+    <div class="comparison">
+        <div class="default">Default fee: $0.15</div>
+        <div class="optimized">Optimized fee: $0.04</div>
+    </div>
+    <p>Savings: 70%</p>
+    <p class="highlight">👉 Multiply this across multiple transactions</p>
+</section>
+
+<!-- SIGNUP -->
+<section id="signup-form">
+    <h2>Be among the first users to never overpay again.</h2>
+
+    <form action="https://assets.mailerlite.com/jsonp/2281601/forms/185304967482967106/subscribe" method="post" target="_blank">
+        <input type="email" name="fields[email]" placeholder="Email" required style="padding:10px; border-radius:8px; border:1px solid #00bfff;">
+        <br><br>
+        <button class="cta">Join Waitlist</button>
+    </form>
+</section>
+
+<footer>
+    <p>© 2026 Qaunex Optimizer</p>
+</footer>
+
+</body>
+</html>
